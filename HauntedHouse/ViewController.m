@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]initWithTitle:@"To Start" style:UIBarButtonItemStylePlain target:self action:@selector(backToStart)];
+    self.navigationItem.rightBarButtonItem = homeButton;
+}
+-(void)backToStart{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
